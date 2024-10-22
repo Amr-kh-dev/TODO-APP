@@ -11,23 +11,26 @@ class AppTheme {
   static Color red = Color(0xFFEC4B4B);
 
   static ThemeData lightTheme = ThemeData(
-    primaryColor: primaryLight,
-    scaffoldBackgroundColor: white,
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: backgroundLight,
-      selectedItemColor: primaryLight,
-      unselectedItemColor: white,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-    ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: primaryLight,
-      foregroundColor: white,
-      shape: CircleBorder(side: BorderSide(width: 4, color: white)),
-    ),
-  
-  );
+      primaryColor: primaryLight,
+      scaffoldBackgroundColor: white,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: backgroundLight,
+        selectedItemColor: primaryLight,
+        unselectedItemColor: white,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: primaryLight,
+        foregroundColor: white,
+        shape: CircleBorder(side: BorderSide(width: 4, color: white)),
+      ),
+      textTheme: TextTheme(
+          titleMedium: TextStyle(
+              fontSize: 20, color: black, fontWeight: FontWeight.bold),
+          titleSmall: TextStyle(
+              fontSize: 14, color: black, fontWeight: FontWeight.w400)));
   ///////////////////////////////////////////////////////////////////////////////////
   static ThemeData darkTheme = ThemeData();
 }
