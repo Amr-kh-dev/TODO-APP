@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/App_theme.dart';
+import 'package:flutter_application_1/models/task_model.dart';
 
 class TaskItame extends StatelessWidget {
+  TaskModel task;
+  TaskItame({Key? key, required this.task}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.sizeOf(context).height;
@@ -20,22 +23,32 @@ class TaskItame extends StatelessWidget {
           ),
           Column(
             children: [
-              Text('palyBasket ball',style: textTheme.titleMedium?.copyWith(color: AppTheme.primaryLight),),
-              SizedBox(height: 2,),
-              Text('deurshan',style: textTheme.titleSmall,),
+              Text(
+                task.title,
+                style: textTheme.titleMedium
+                    ?.copyWith(color: AppTheme.primaryLight),
+              ),
+              SizedBox(
+                height: 2,
+              ),
+              Text(
+                task.descrption ,
+                style: textTheme.titleSmall,
+              ),
             ],
-
           ),
           Spacer(),
           Container(
             height: 34,
             width: 69,
             decoration: BoxDecoration(
-              color: AppTheme.primaryLight,
-              borderRadius: BorderRadius.circular(10)
-              
+                color: AppTheme.primaryLight,
+                borderRadius: BorderRadius.circular(10)),
+            child: Icon(
+              Icons.check,
+              color: AppTheme.white,
+              size: 32,
             ),
-            child: Icon(Icons.check,color: AppTheme.white,size: 32,),
           )
         ],
       ),

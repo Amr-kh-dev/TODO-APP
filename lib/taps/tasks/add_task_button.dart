@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/task_model.dart';
 import 'package:flutter_application_1/widgets/defeult_elevten_button.dart';
 import 'package:flutter_application_1/widgets/defeult_text_form_filed.dart';
 import 'package:intl/intl.dart';
@@ -87,5 +88,11 @@ class _AddTaskButtonState extends State<AddTaskButton> {
     );
   }
 
-  void addTask() {}
+  void addTask() {
+    TaskModel tasks= TaskModel(
+        title: titleController.text,
+        dateTime: dateTime,
+        descrption: descrptionController.text,
+      );
+  }
 }
