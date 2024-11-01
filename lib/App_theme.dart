@@ -11,6 +11,10 @@ class AppTheme {
   static Color red = Color(0xFFEC4B4B);
 
   static ThemeData lightTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true
+    ),
       primaryColor: primaryLight,
       scaffoldBackgroundColor: white,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
